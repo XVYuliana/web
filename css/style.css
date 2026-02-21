@@ -12556,3 +12556,23 @@ font-size: 50px;
     font-size: 34px;
   }
 }
+
+
+.gran-dia {
+  font-family: 'Great Vibes', cursive;
+  font-size: 60px;
+  color: #d4af37;
+  text-align: center;
+  animation: brilloXV 2s ease-in-out infinite alternate;
+}
+
+/* efecto dorado suave */
+@keyframes brilloXV {
+  from {
+    text-shadow: 0 0 10px rgba(212,175,55,0.4);
+  }
+  to {
+    text-shadow: 0 0 25px rgba(212,175,55,0.9);
+  }
+}
+
