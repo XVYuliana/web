@@ -12558,21 +12558,73 @@ font-size: 50px;
 }
 
 
+/* ===== ESTILO BASE (Desktop primero) ===== */
 .gran-dia {
   font-family: 'Great Vibes', cursive;
-  font-size: 60px;
-  color: #d4af37;
+  font-size: 60px;              /* 👉 tamaño desktop */
+  color: #d4af37;               /* 👉 dorado XV */
   text-align: center;
-  animation: brilloXV 2s ease-in-out infinite alternate;
+  line-height: 1.2;
+  white-space: nowrap; /* 👈 esto evita que se parta */
+  animation: aparecerXV 1.2s ease forwards;
+  text-shadow:
+    0 0 8px rgba(212,175,55,0.6),
+    0 0 16px rgba(255,215,120,0.4);
 }
 
-/* efecto dorado suave */
-@keyframes brilloXV {
+/* ===== ANIMACIÓN SUAVE ===== */
+@keyframes aparecerXV {
   from {
-    text-shadow: 0 0 10px rgba(212,175,55,0.4);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    text-shadow: 0 0 25px rgba(212,175,55,0.9);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+/* =========================
+   CELULAR PEQUEÑO (≤400px)
+========================= */
+@media (max-width: 400px) {
+
+  .gran-dia {
+    font-size: 36px;
+    padding: 0 10px;
+  }
+
+}
+
+/* =========================
+   CELULAR MEDIANO (401px - 576px)
+========================= */
+@media (min-width: 401px) and (max-width: 576px) {
+
+  .gran-dia {
+    font-size: 42px;
+  }
+
+}
+
+/* =========================
+   CELULAR GRANDE (577px - 768px)
+========================= */
+@media (min-width: 577px) and (max-width: 768px) {
+
+  .gran-dia {
+    font-size: 50px;
+  }
+
+}
+
+/* =========================
+   TABLET (769px - 1024px)
+========================= */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .gran-dia {
+    font-size: 58px;
+  }
+
+}
