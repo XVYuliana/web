@@ -156,7 +156,11 @@ if (sunflowerSection) {
 
     if (distance <= 0) {
       clearInterval(countdown);
-      countdownContainer.textContent = "¡Hoy es el gran día!";
+      countdownContainer.innerHTML = `
+      <div class="gran-dia">
+        ¡Hoy es el gran día!
+      </div>
+      `;
       return;
     }
 
@@ -194,3 +198,4 @@ if (sunflowerSection) {
     }, 2000);
   });
 });
+
